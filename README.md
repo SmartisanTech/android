@@ -6,13 +6,18 @@ To get started , you'll need to get familiar with
 * [Preparing to Build](http://source.android.com/source/building.html)
 
 To initialize your local repository using a command like this:
-
-    repo init -u https://github.com/SmartisanTech/android.git -b -m manifest.xml --repo-url smartisan:/googlesource/git-repo
-
+***For Smartisan Internal Developer***
+```sh
+    repo init -u https://github.com/SmartisanTech/android.git -b smartisan-m -m manifest_smartisan_internal.xml --repo-url smartisan:/googlesource/git-repo
+```
+***For Other Developer***
+```sh
+    repo init -u https://github.com/SmartisanTech/android.git -b smartisan-m -m manifest.xml
+```
 Then to sync up:
-
-    repo sync
-
+```sh
+    repo sync -cdj4
+```
 
 ### To flash a system image:
 <aside class="caution"><strong>Caution:</strong><span> Flashing a new system image deletes all user data. Be certain to first

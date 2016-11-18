@@ -6,6 +6,7 @@ To get started , you'll need to get familiar with
 * [Preparing to Build](http://source.android.com/source/building.html)
 
 To initialize your local repository using a command like this:
+
 ***For Smartisan Internal Developer***
 ```sh
     repo init -u https://github.com/SmartisanTech/android.git -b smartisan-m -m manifest_smartisan_internal.xml --repo-url smartisan:/googlesource/git-repo

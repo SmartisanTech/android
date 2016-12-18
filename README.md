@@ -1,69 +1,58 @@
-### Getting Started
+#一步 (One Step)
 
-To get started , you'll need to get familiar with
+![](http://static.smartisanos.cn/common/img/third-medium/one-step-icon_8dab923f53.png)
+
+> 锤子科技的一小步，智能手机进化的一大步
+
+----
+
+### 什么是One Step？
+通过拖拽完成将信息发送至应用或联系人的动作，节省了在不同应用之间切换的诸多步骤，第一次打通了手持设备中应用间的边界
+
+[进一步了解One Step](http://www.smartisan.com/m1/#/os?section=onestep)
+
+----
+
+### One Step涉及的工程列表：
+* frameworks_base (需更更改WindowManager) <https://github.com/SmartisanTech/android_frameworks_base>
+* frameworks_native (需要更改input, 响应调整window后touch事件)<https://github.com/SmartisanTech/android_frameworks_native>
+* packages_apps_OneStep(OneStep UI层) <https://github.com/SmartisanTech/packages_apps_OneStep>
+* build（加入smartisanos框架编译以及OneStep应用） <https://github.com/SmartisanTech/android_build>
+* external_sepolicy (为新引入的OneStepService设置权限)<https://github.com/SmartisanTech/android_external_sepolicy>
+* frameworks_smatisanos_base (smartisanos 框架层) <https://github.com/SmartisanTech/android_frameworks_smartisanos-base>
+* SmartisanSDK (为第三方应用接入提供接口，以及一个简单的demo)<https://github.com/SmartisanTech/SmartisanOS-SDK>
+
+### Getting Started
+下载之前你需要熟悉：
+
 * [Build Environment](http://source.android.com/source/initializing.html)
 * [Git and Repo](http://source.android.com/source/using-repo.html)
 * [Preparing to Build](http://source.android.com/source/building.html)
 
-To initialize your local repository using a command like this:
+初始化仓库：
 
-***For Smartisan Internal Developer***
 ```sh
-    repo init -u https://github.com/SmartisanTech/android.git -b smartisan-m -m manifest_smartisan_internal.xml --repo-url smartisan:/googlesource/git-repo
+    $ repo init -u https://github.com/SmartisanTech/android.git -b smartisan-m-onestep_bigboom -m manifest.xml
 ```
-***For Other Developer***
+> Tips: 中国的开发者可以使用清华的镜像，[使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/AOSP/)
+
+开始同步代码：
+
 ```sh
-    repo init -u https://github.com/SmartisanTech/android.git -b smartisan-m -m manifest.xml
-```
-Then to sync up:
-```sh
-    repo sync -cdj4
+    $ repo sync -cdj4
 ```
 
-### To flash a system image:
-<aside class="caution"><strong>Caution:</strong><span> Flashing a new system image deletes all user data. Be certain to first
-backup any personal data such as photos.</span></aside>
-<ol>
-<li>
-<p>Download the appropriate system image for your device below, then unzip it
-   to a safe directory.</p>
-</li>
-<li>
-<p>Connect your device to your computer over USB.</p>
-</li>
-<li>
-<p>Start the device in fastboot mode with one of the following methods:</p>
-<ul>
-<li>
-<p>Using the <a href="http://developer.android.com/tools/help/adb.html">adb tool</a>:
-  With the device powered on, execute:</p>
-<p>adb reboot bootloader</p>
-</li>
-<li>
-<p>Using a key combo: Turn the device off, then turn it on and immediately
-  hold down the relevant
-  <a href="https://source.android.com/source/building-devices.html#booting-into-fastboot-mode">key combination</a>
-  for your device. For example, to put a Nexus 5 ("hammerhead") into
-  fastboot mode, press and hold Volume Up + Volume Down + Power as the
-  device begins booting up.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>If necessary, unlock the device's bootloader by running:</p>
-<pre class="prettyprint notranslate" translate="no"><code>fastboot flashing unlock
-</code></pre>
-<p>or, for older devices, run:</p>
-<pre class="prettyprint notranslate" translate="no"><code>fastboot oem unlock
-</code></pre>
-<p>The target device will show you a confirmation screen. (This erases all data
-on the target device.)</p>
-</li>
-<li>
-<p>Open a terminal and navigate to the unzipped system image directory.</p>
-</li>
-<li>
-<p>Execute the <code>flash-all</code> script. This script installs the necessary
-   bootloader, baseband firmware(s), and operating system.</p>
-</li>
-</ol>
+同步完成后进行编译：
+
+> Tips: 如果你打算用Nexus6的真机体验的话，别忘了在编译前去下载对应的驱动。代码的基线是 Nexus 6 (Mobile) for Android 6.0.1 (MOB31K) 下载地址：<https://developers.google.com/android/drivers>
+
+```sh
+     $ . build/envsetup.sh
+     $ lunch aosp_shamu-userdebug
+     $ make -j4;
+```
+编译完成后体验：
+```sh
+     $ emulator
+```
+> Tips: Nexsu6真机的刷机， 请参考 <http://source.android.com/source/running.html#flashing-a-device>

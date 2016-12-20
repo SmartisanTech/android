@@ -6,18 +6,18 @@
 
 ----
 
-### 什么是One Step？
+### 什么是一步（One Step）？
 通过拖拽完成将信息发送至应用或联系人的动作，节省了在不同应用之间切换的诸多步骤，第一次打通了手持设备中应用间的边界
 
-[进一步了解One Step](http://www.smartisan.com/m1/#/os?section=onestep)
+[进一步了解 One Step](http://www.smartisan.com/m1/#/os?section=onestep)
 
 ----
 
 ### 写在前面的话
-1. 我们开源OneStep的目的是希望其他厂商可以集成进来，一起改善用户的使用体验。 
-2. 我们把所有接口封在了android.view.onestep的包下面。考虑到第三方应用集成进来的时候复杂度，恳请厂商不要改变现有接口，仅仅进行扩展。同时热烈欢迎厂商可以反馈commit给我们。
-3. 我们由于人力有限，所以仅在nexus6的真机上进行了测试.Code Base是Android 6.0.1 (MOB31K). 理论上其他的机型也可以进行编译运行，但是不排除会有bug.
-4. 我们提供了Nexus6的build [传送门](https://github.com/SmartisanTech/SmartisanOS_Build_Release)
+1. 我们开源 One Step 是希望其他厂商能将这一功能集成在系统中，共同改善用户体验、提升操作效率。 
+2. 我们把所有接口封装在 android.view.onestep 包下，考虑到第三方应用集成时的复杂度，请在不改变现有接口的前提下进行扩展；同时也欢迎通过 commit 提交反馈给我们。
+3. 由于人力有限，我们仅在 Nexus6 的真机上进行了相关测试，Code Base 是 Android 6.0.1 (MOB31K). 理论上其他的机型也可以进行编译运行，但不排除会有bug 出现。
+4. 我们为你提供了 Nexus6 的 build [传送门](https://github.com/SmartisanTech/SmartisanOS_Build_Release)
 
 ----
 

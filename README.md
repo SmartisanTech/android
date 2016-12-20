@@ -21,7 +21,7 @@
 ----
 
 ### One Step涉及的工程列表：
-* frameworks_base (需更更改WindowManager) <https://github.com/SmartisanTech/android_frameworks_base>
+* frameworks_base (需要更改WindowManager) <https://github.com/SmartisanTech/android_frameworks_base>
 * frameworks_native (需要更改input, 响应调整window后touch事件)<https://github.com/SmartisanTech/android_frameworks_native>
 * packages_apps_OneStep(OneStep UI层) <https://github.com/SmartisanTech/packages_apps_OneStep>
 * build（加入smartisanos框架编译以及OneStep应用） <https://github.com/SmartisanTech/android_build>

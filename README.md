@@ -14,10 +14,9 @@
 ----
 
 ### 写在前面的话
-1. 我们开源 One Step 是希望其他厂商能将这一功能集成在系统中，共同改善用户体验、提升操作效率。 
-2. 我们把所有接口封装在 android.view.onestep 包下，考虑到第三方应用集成时的复杂度，请在不改变现有接口的前提下进行扩展；同时也欢迎通过 commit 提交反馈给我们。
-3. 由于人力有限，我们仅在 Nexus6 的真机上进行了相关测试，Code Base 是 Android 6.0.1 (MOB31K). 理论上其他的机型也可以进行编译运行，但不排除会有bug 出现。
-4. 我们为你提供了 Nexus6 的 build [传送门](https://github.com/SmartisanTech/SmartisanOS_Build_Release)
+1. 我们开源 One Step 是希望其他厂商能将这一功能集成在系统中，共同改善安卓用户体验、提升操作效率。 
+2. 我们把 One Step 所有接口封装在 android.view.onestep 包下，考虑到第三方应用集成时的复杂度，请在不改变现有接口的前提下进行扩展。同时也欢迎通过 commit 向我们提交反馈。
+3. 由于人力有限，我们仅在 Nexus6（Code Base 是 Android 6.0.1 (MOB31K)）的真机上进行了相关测试，理论上其他的机型也可以进行编译运行，但不排除会有bug 出现。最后，我们为你提供了 Nexus6 的 [build](https://github.com/SmartisanTech/SmartisanOS_Build_Release)。
 
 ----
 

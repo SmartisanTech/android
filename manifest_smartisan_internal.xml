@@ -2,7 +2,6 @@
 <manifest>
 
   <remote fetch="smartisan:/qualcomm" name="smartisan" review="https://172.16.0.9:8080" revision="google/android-6.0.1_r74" />
-
   <remote fetch=".." name="github" revision="refs/heads/smartisan-m-onestep_bigboom" />
 
   <default remote="smartisan" />
@@ -481,4 +480,5 @@
 
   <project path="frameworks/smartisanos-base" name="SmartisanTech/android_frameworks_smartisanos-base" groups="pdk" remote="github" revision="refs/heads/smartisan-m"/>
   <project path="packages/apps/OneStep" name="SmartisanTech/packages_apps_OneStep" groups="pdk-fs" remote="github" />
+  <project path="packages/apps/BigBang" name="SmartisanTech/packages_apps_BigBang" groups="pdk-fs" remote="github" />
 </manifest>

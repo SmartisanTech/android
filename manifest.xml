@@ -481,4 +481,5 @@
 
   <project path="frameworks/smartisanos-base" name="SmartisanTech/android_frameworks_smartisanos-base" groups="pdk" remote="github" revision="refs/heads/smartisan-m"/>
   <project path="packages/apps/OneStep" name="SmartisanTech/packages_apps_OneStep" groups="pdk-fs" remote="github" />
+  <project path="packages/apps/BigBang" name="SmartisanTech/packages_apps_BigBang" groups="pdk-fs" remote="github" />
 </manifest>

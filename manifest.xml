@@ -6,6 +6,7 @@
   <remote fetch=".." name="github" revision="refs/heads/smartisan-m-onestep_bigboom" />
 
   <default remote="aosp" sync-c="true"/>
+  <uses-permission android:name="android.permission.INTERNET" />
 
   <project path="build" name="SmartisanTech/android_build" groups="pdk" remote="github">
     <copyfile src="core/root.mk" dest="Makefile" />

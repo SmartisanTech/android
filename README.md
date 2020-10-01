@@ -19,7 +19,7 @@
 
 ----
 
-### 写在前面的话
+### 写在前面的话(Words written in the front)
 1. 我们开源 One Step 和 Big Bang 是希望其他厂商能将这些功能集成在系统中，共同改善安卓用户体验、提升操作效率。
 2. 我们把 One Step 所有接口封装在 android.view.onestep 包下，考虑到第三方应用集成时的复杂度，请在不改变现有接口的前提下进行扩展。同时也欢迎通过 commit 向我们提交反馈。
 3. 此次开源的 Big Bang 基于 Smartisan OS v3.2.0 版本，区别如下：
